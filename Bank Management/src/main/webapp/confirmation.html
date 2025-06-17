@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Submitted</title>
+     <link rel="icon" href="images\newLogo.JPG" type="image/jpg">
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Section */
+        .head {
+            background-color: #007bff;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar Styling */
+        .nav-bar {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        .nav-bar a:hover {
+            background-color: #575757;
+        }
+
+        /* Confirmation Box Styling */
+        .confirmation-box {
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .confirmation-box h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .confirmation-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .confirmation-box img {
+            max-width: 80px;
+            margin-bottom: 20px;
+            filter: hue-rotate(90deg); /* Applies a green tint to the checkmark */
+        }
+
+        .confirmation-box a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .confirmation-box a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .confirmation-box h2 {
+                font-size: 24px;
+            }
+
+            .confirmation-box p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="head">
+        Bank Of Project
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!-- Confirmation Box -->
+    <div class="confirmation-box">
+        <img src="https://img.icons8.com/ios/452/checkmark.png" alt="success-icon">
+        <h2>Your request is submitted!</h2>
+        <p>Thank you for submitting your account creation request. Please wait for admin approval.</p>
+        <a href="index.html">Go to Home</a>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 Bank Of Project. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Balance</title>
+     <link rel="icon" href="images\newLogo.JPG" type="image/jpg">
+    <link rel="stylesheet" href="navBaarFooter.css">
+	</head>
+
+	<style>
+    body {
+        font-family: Arial, sans-serif;
+        align-items: center;
+        height: 100vh;
+        background-image: url('images/Auto Layout Horizontal.svg');
+        /* Image ka path */
+        background-size: cover;
+        /* Puri screen cover karega */
+        background-position: center;
+        /* Center mein dikhayega */
+        background-repeat: no-repeat;
+        /* Repeat nahi hoga */
+        background-attachment: fixed;
+        /* Scroll karne pe image fixed rahegi */
+        z-index: 10;
+
+    }
+
+    .head2 {
+        height: 10vh;
+    }
+
+    .container {
+        background-color: rgb(55 233 91 / 2%);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 22vw;
+        height: 45vh;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 80%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 40%;
+        padding: 9px;
+        background-color: #000000;
+        color: white;
+        border-radius: 55px;
+        font-size: 12px;
+        margin-left: 85px;
+    }
+
+    button:hover {
+        background-color: #f7f7f7;
+        color: black;
+        border: 2px solid black;
+    }
+
+    .box {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 55px;
+    }
+
+    .box img {
+        height: 80vh;
+    }
+
+    .head2 a {
+        height: 5vh;
+    }
+
+    .footer {
+        background-color: #333;
+        color: white;
+        padding: 14px 0;
+        text-align: center;
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+    }
+</style>
+
+<body>
+
+    <div class="head2">
+        <img src="images\ourlogo.svg" class="logo" alt="Logo">
+        <a href="admin.jsp">Back</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="netBanking.html">Net Banking</a>
+        <a href="createAc.jsp">Create Account</a>
+    </div>
+
+    <div class="box">
+        <img src="images/manWIthMoney.svg" alt="Image">
+        <div class="container">
+            <h2>Add Balance to Account</h2>
+            <form action="addBalance" method="POST">
+                <label for="acno">Account Number:</label>
+                <input type="text" id="acno" name="acno" required>
+
+                <label for="amount">Amount to Add:</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <button type="submit">Add Balance</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 FinTrust Bank. All Rights Reserved.</p>
+            <div class="contact-info">
+                <div>
+                    <i class="email"><img src="images\mailIconeWhite.svg" alt="Email"></i>
+                    <span>fintrustbank@gmail.com</span>
+                </div>
+                <div>
+                    <!-- Changed to fa-phone (correct phone icon) -->
+                    <i class="phone"><img src="images\PhoneIconWhite.svg" alt="Phone"></i>
+                    <span>1800-1234-556</span>
+                </div>
+                <div>
+                    <i class="location"><img src="images\location_onIconWhite.svg" alt="Location"></i>
+                    <span>India, Bengaluru</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>  <!-- done -->

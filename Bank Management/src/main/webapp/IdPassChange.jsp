@@ -1,0 +1,171 @@
+<!-- forgot-password.jsp -->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Username/Password</title>
+     <link rel="icon" href="images\newLogo.JPG" type="image/jpg">
+   <link rel="stylesheet" href="navBaarFooter.css">
+    <style>
+        body {
+            background-image: url('images/Auto Layout Horizontal.svg');
+        /* Image ka path */
+        background-size: cover;
+        /* Puri screen cover karega */
+        background-position: center;
+        /* Center mein dikhayega */
+        background-repeat: no-repeat;
+        /* Repeat nahi hoga */
+        background-attachment: fixed;
+        /* Scroll karne pe image fixed rahegi */
+        z-index: 10;
+
+        }
+
+        .container {
+            width: 30%;
+            margin: 100px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Adjusting the layout for inputs to be in line */
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 26%;
+            position: relative;
+            left: 37.4%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .footer {
+            position: static;
+        }
+
+        .head2 {
+            height: 11vh;
+        }
+
+        .head2 a {
+            height: 5vh;
+        }
+        .box{
+            display: flex;
+        }
+        .box img{
+            height: 60vh;
+            margin-top: 100px;
+        }
+        .message{
+         color:red;
+         font-size:30px;
+         text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div class="head2">
+        <img src="images\ourlogo.svg" class="logo" alt="Logo">
+        <a href="UserWelcome.jsp">Back</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+           <!-- Display Message -->
+    <%
+            String message = (String) request.getAttribute("message");
+            if (message != null) {
+                out.println("<div class='message'>" + message + "</div>");
+            }
+        %>
+      <div class="box">
+    <div class="container">
+        <h2>Forgot Username/Password</h2><br><br>
+        <form action="UpdateCredentialsServlet" method="POST">
+            <div class="input-group">
+                    <div>
+                        <label for="acno">Account Number:</label>
+                        <input type="text" id="acno" name="acno" required>
+                    </div>
+                    <div>
+                        <label for="aadhar">Aadhar Number:</label>
+                        <input type="text" id="aadhar" name="aadhar" required>
+                    </div>
+                </div>
+            <br><br>
+            <div class="input-group">
+                    <div>
+                        <label for="newUsername">New Username:</label>
+                        <input type="text" id="newUsername" name="newUsername">
+                    </div>
+                    <div>
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" id="newPassword" name="newPassword">
+                    </div>
+                </div>
+                <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+            <img src="images/securityLady.svg" alt="photo">
+    </div>
+        
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 FinTrust Bank. All Rights Reserved.</p>
+            <div class="contact-info">
+                <div>
+                    <i class="email"><img src="images\mailIconeWhite.svg" alt="Email"></i>
+                    <span>fintrustbank@gmail.com</span>
+                </div>
+                <div>
+                    <i class="phone"><img src="images\PhoneIconWhite.svg" alt="Phone"></i>
+                    <span>1800-1234-556</span>
+                </div>
+                <div>
+                    <i class="location"><img src="images\location_onIconWhite.svg" alt="Location"></i>
+                    <span>India, Bengaluru</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
