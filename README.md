@@ -27,7 +27,7 @@
 
 | Layer        | Technology                         |
 |--------------|-------------------------------------|
-| Frontend     | HTML, CSS, JavaScript, Bootstrap    |
+| Frontend     | HTML, CSS, JavaScript   |
 | Backend      | Java, Servlet, JSP                  |
 | Database     | MySQL                               |
 | Connectivity | JDBC                                |
@@ -74,20 +74,8 @@
 
 ---
 
-📂 **SQL File:**  
-You can download and import this SQL file for creating all required tables:  
-[`database.sql`](database.sql)
 
----
-
-## ⚙️ How to Run the Project Locally
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/fintrust-bank.git
-
-
-   🙋‍♂️ Author
+🙋‍♂️ Author
 Dipak KUmar Sahu
 📧 dipak04092004@gmail.com
 feel free to email me for any project related question.
