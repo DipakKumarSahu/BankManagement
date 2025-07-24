@@ -76,6 +76,6 @@
 
 
 🙋‍♂️ Author
-Dipak KUmar Sahu
+Dipak Kumar Sahu
 📧 dipak04092004@gmail.com
 feel free to email me for any project related question.
