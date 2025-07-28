@@ -41,8 +41,9 @@ public class dataPrint extends HttpServlet {
         
         try {
             // Database connection
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankmanagement", "root", "1234");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankmanagement", "root", "1234");
+        	con = DBConnection.getConnection();
             stmt = con.createStatement();
             
             // Query to fetch data

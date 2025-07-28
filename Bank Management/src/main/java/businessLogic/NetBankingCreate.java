@@ -27,19 +27,16 @@ public class NetBankingCreate extends HttpServlet {
         String password = request.getParameter("password");
         String confirmpassword = request.getParameter("confirmpassword");
 
-        // Setup database connection
-        String jdbcURL = "jdbc:mysql://localhost:3306/bankmanagement"; // Replace with your DB info
-        String jdbcUsername = "root";
-        String jdbcPassword = "1234";  // Replace with your DB password
-
+        
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
 
         try {
+        	con = DBConnection.getConnection();
             // Establish connection
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            con = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
 
             // Check if the account number and Aadhar number match and account is active
             String query = "SELECT * FROM user_data WHERE acno = ? AND aadharno = ? AND status = 'active'";

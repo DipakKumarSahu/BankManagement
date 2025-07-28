@@ -27,14 +27,8 @@ int slno = Integer.parseInt(request.getParameter("slno"));
         PreparedStatement stmt = null;
         
         try {
-            String dbURL = "jdbc:mysql://localhost:3306/bankmanagement";
-            String dbUser = "root";
-            String dbPassword = "1234";
-            
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(dbURL, dbUser, dbPassword);
-            
-            
+        	
+        	con = DBConnection.getConnection();            
             // Fetch current status
             String query = "SELECT status FROM user_data WHERE slno = ?";
             stmt = con.prepareStatement(query);

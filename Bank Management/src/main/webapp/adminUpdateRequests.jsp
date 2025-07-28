@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="Demo.DBConnection" %>  <%-- ✅ Correct Package Import --%>
+<%@ page import="businessLogic.DBConnection" %>  <%-- ✅ Correct Package Import --%>
 <html>
 <head>
     <title>Update Requests</title>

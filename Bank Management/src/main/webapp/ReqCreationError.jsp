@@ -12,13 +12,11 @@
    			 padding: 0;
     		margin: 0;
 			}
-        /* Ensure full height for body and html */
         html, body {
-            height: 17%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-           
+           height: 17%;
+           margin: 0;
+           display: flex;
+           flex-direction: column;    
         }
 
         body {

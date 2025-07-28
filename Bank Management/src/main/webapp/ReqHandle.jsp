@@ -1,3 +1,4 @@
+<%@page import="businessLogic.DBConnection"%>
 <%@ page import="java.sql.*, java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <html lang="en">
@@ -207,12 +208,7 @@ input[type="submit"]:hover {
                     String acno = request.getParameter("acno");
 
                     try {
-                        String dbURL = "jdbc:mysql://localhost:3306/bankmanagement";
-                        String dbUser = "root";
-                        String dbPassword = "1234";
-
-                        Class.forName("com.mysql.cj.jdbc.Driver");
-                        con = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+                       con = DBConnection.getConnection();
 
                         String query = "SELECT * FROM user_data";
                         if (acno != null && !acno.isEmpty()) {
@@ -234,30 +230,7 @@ input[type="submit"]:hover {
                                 <td><%= rs.getString("lname") %></td>
                                 <td><%= rs.getString("email") %></td>
                                 <td><%= rs.getString("phone") %></td>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        +
-                        
-                        
-                        
-                        
-                                <td><%= rs.getString("balance") %></td>
+								<td><%= rs.getString("balance") %></td>
                                 <td><%= rs.getString("status") %></td>
                                 <td><%= rs.getString("address") %></td>
                                 <td><%= rs.getString("city") %></td>

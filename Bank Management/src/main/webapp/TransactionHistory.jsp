@@ -1,3 +1,4 @@
+<%@page import="businessLogic.DBConnection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
@@ -74,8 +75,7 @@
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankmanagement", "root", "1234");
+           conn = DBConnection.getConnection();
 
             // Fetch transactions where user is either sender or receiver
             String query = "SELECT * FROM transaction_history WHERE acno = ? OR receiver_acno = ? ORDER BY date DESC";

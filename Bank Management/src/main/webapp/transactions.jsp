@@ -1,6 +1,6 @@
+<%@page import="businessLogic.Transaction"%>
 <%@ page import="java.util.List" %>
 <%@ page import="java.sql.Timestamp" %>
-<%@ page import="Demo.Transaction" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>

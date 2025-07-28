@@ -1,3 +1,4 @@
+<%@page import="businessLogic.DBConnection"%>
 <%@ page import="java.sql.*, java.util.*" %>
 <%@ page contentType="text/html; charset=ISO-8859-1" %>
 <html>
@@ -80,9 +81,7 @@
             ResultSet rs = null;
             try {
                 // Database connection
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankmanagement", "root", "1234");
-                stmt = con.createStatement();
+               con= DBConnection.getConnection();
                 
                 // Query to fetch data
                 String query = "SELECT * FROM user_data";

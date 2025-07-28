@@ -58,20 +58,21 @@ public class createAc extends HttpServlet {
     private String generateNewAcno() {
         String newAcno = "";
         // Database connection details
-        String url = "jdbc:mysql://localhost:3306/bankmanagement";
-        String username = "root"; // MySQL username
-        String password = "1234"; // MySQL password
+//        String url = "jdbc:mysql://localhost:3306/bankmanagement";
+//        String username = "root"; // MySQL username
+//        String password = "1234"; // MySQL password
 
         Connection con = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
 
         try {
+        	 con = DBConnection.getConnection();
             // Load the MySQL JDBC Driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish connection
-            con = DriverManager.getConnection(url, username, password);
+//            con = DriverManager.getConnection(url, username, password);
 
             // Query to get the last account number
             String getLastAcnoQuery = "SELECT acno FROM user_data ORDER BY acno DESC LIMIT 1";
@@ -98,9 +99,7 @@ public class createAc extends HttpServlet {
                 newAcno = "330000001";
             }
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        }  catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
@@ -117,18 +116,19 @@ public class createAc extends HttpServlet {
 
     private boolean createAccountInDatabase(String acno, String fname, String lname, String email, String phone, String dob, String gender, String aadharno, String address, String city, String state, String zipcode, float balance) {
         // Insert the data into the database
-        String url = "jdbc:mysql://localhost:3306/bankmanagement";
-        String username = "root"; // MySQL username
-        String password = "1234"; // MySQL password
+//        String url = "jdbc:mysql://localhost:3306/bankmanagement";
+//        String username = "root"; // MySQL username
+//        String password = "1234"; // MySQL password
         Connection con = null;
         PreparedStatement stmt = null;
 
         try {
+        	con = DBConnection.getConnection();
             // Load the MySQL JDBC Driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish the connection
-            con = DriverManager.getConnection(url, username, password);
+//            con = DriverManager.getConnection(url, username, password);
 
             // SQL query to insert the data into the user_data table
             String query = "INSERT INTO user_data (acno, fname, lname, email, phone, dob, gender, aadharno, address, city, state, zipcode, balance) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -153,8 +153,6 @@ public class createAc extends HttpServlet {
             int result = stmt.executeUpdate();
             return result > 0; // Return true if insert was successful, else false
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

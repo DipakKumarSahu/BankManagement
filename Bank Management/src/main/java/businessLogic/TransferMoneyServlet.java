@@ -34,11 +34,9 @@ public class TransferMoneyServlet extends HttpServlet {
         PreparedStatement insertTransactionStmt = null;
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankmanagement", "root", "1234");
-
-            conn.setAutoCommit(false); // Start transaction
-
+            	
+        	conn = DBConnection.getConnection(); 
+        	
             // Step 1: Check sender balance
             checkBalanceStmt = conn.prepareStatement("SELECT balance FROM user_data WHERE acno = ?");
             checkBalanceStmt.setString(1, senderAcno);
