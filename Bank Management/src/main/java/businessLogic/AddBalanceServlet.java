@@ -33,7 +33,7 @@ import java.sql.SQLException;
 
         try {
             // Get connection to the database
-            conn = BalanceDBConnection.getConnection();
+            conn = DBConnection.getConnection();
             conn.setAutoCommit(false); // ✅ Transaction Start
 
             // Step 1: Check if receiver's account exists

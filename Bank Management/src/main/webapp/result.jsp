@@ -41,8 +41,6 @@
         padding: 5px;
     }
 
-
-
 </style>
 
 <body>

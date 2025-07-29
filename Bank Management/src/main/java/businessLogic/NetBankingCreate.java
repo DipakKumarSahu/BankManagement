@@ -12,9 +12,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Servlet implementation class NetBankingCreate
- */
 @WebServlet("/NetBankingCreate")
 public class NetBankingCreate extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -34,11 +31,6 @@ public class NetBankingCreate extends HttpServlet {
 
         try {
         	con = DBConnection.getConnection();
-            // Establish connection
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            con = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-
-            // Check if the account number and Aadhar number match and account is active
             String query = "SELECT * FROM user_data WHERE acno = ? AND aadharno = ? AND status = 'active'";
             pst = con.prepareStatement(query);
             pst.setString(1, accountno);

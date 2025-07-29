@@ -81,6 +81,7 @@
     
     <h2>Transaction History</h2>
     <table>
+    <thead>
         <tr>
             <th>ID</th>
             <th>Sender Account</th>
@@ -88,11 +89,13 @@
             <th>Amount</th>
             <th>Date</th>
         </tr>
+        </thead>
         <%
             List<Transaction> transactions = (List<Transaction>) request.getAttribute("transactions");
             if (transactions != null && !transactions.isEmpty()) {
                 for (Transaction t : transactions) {
         %>
+        <tbody>
         <tr>
             <td><%= t.getId() %></td>
             <td><%= t.getAcno() %></td>
@@ -110,6 +113,7 @@
         <%
             }
         %>
+        </tbody>
     </table>
 </body>
 </html>

@@ -115,11 +115,6 @@ th {
     color: white;
 }
 
-/*tr:hover {
-    background-color: #4a2725a1;
-    color:white;
-}*/
-
 /* Action Button Styling */
 input[type="submit"] {
     background-color: #f44336;
@@ -127,7 +122,6 @@ input[type="submit"] {
     border: none;
     padding: 6px 10px;
     cursor: pointer;
-    /*transition: background-color 0.3s;*/
     font-size: 14px;
 }
 

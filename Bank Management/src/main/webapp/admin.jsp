@@ -273,9 +273,6 @@
             <!-- Cards for Account Overview -->
             <div class="pack">
                 <img src="images\girlhandsup.svg" alt="">
-                <!-- <div class="card"> -->
-                    <!-- <h3>Admin page</h3>
-                    <p>This page gives you all facilities like Track and Manage your transactions</p> -->
                     <div class="admin-card">
                         <h2> This is FinTrust Bank Admin Panel</h2>
                         <p>Manage users, activate accounts, and oversee transactions efficiently.</p>
